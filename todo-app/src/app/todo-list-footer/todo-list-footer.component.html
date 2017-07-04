@@ -1,3 +1,20 @@
 <footer class="footer" *ngIf="todos.length > 0">
-  <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+  <!-- <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+  <br>
+  <span class="todo-count"><strong>{{todosHistory.length}}</strong> {{todosHistory.length == 1 ? 'item' : 'items'}} have been entered today</span> -->
+  <div>
+    <span>Items left todo: <strong>{{todos.length}}</strong></span>
+    <br>
+    <br>
+    <span>Items completed today: <strong>{{todoCounter}}</strong></span>
+    <br>
+    <br>
+    <button class="pure-button pure-button-active">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      Email
+    </button>
+  </div>
+  <br>
+  <br>
+
 </footer>

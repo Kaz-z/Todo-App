@@ -11,6 +11,12 @@ export class TodoListFooterComponent {
   @Input()
   todos: Todo[];
 
+  @Input()
+  todosHistory: Todo[];
+
+  @Input()
+  todoCounter: number;
+
   constructor() {
   }
 

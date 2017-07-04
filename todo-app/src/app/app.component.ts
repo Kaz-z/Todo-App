@@ -10,12 +10,16 @@ import { Todo } from './todo';
 })
 export class AppComponent implements OnInit {
 
+  // To store todos
   todos: Todo[] = [];
 
-  constructor(
-    private todoDataService: TodoDataService
-  ) {
-  }
+  // Todo counter
+  todoCounter: number = 0;
+
+  // To store history of todos
+  todosHistory: Todo[] = [];
+
+  constructor(private todoDataService: TodoDataService) {}
 
   public ngOnInit() {
     this.todoDataService
@@ -33,6 +37,7 @@ export class AppComponent implements OnInit {
       .subscribe(
       (newTodo) => {
         this.todos = this.todos.concat(newTodo);
+        this.todosHistory = this.todosHistory.concat(newTodo);
       }
       );
   }
@@ -43,6 +48,7 @@ export class AppComponent implements OnInit {
       .subscribe(
       (updatedTodo) => {
         todo = updatedTodo;
+        this.todoCounter++;
       }
       );
   }
