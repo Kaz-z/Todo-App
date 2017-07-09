@@ -62,4 +62,15 @@ export class AppComponent implements OnInit {
       }
       );
   }
+
+  getStyle() {
+    if(this.todos.length > 0) {
+      return "#ffb41e";
+    }
+
+    else {
+      return "#42f445";
+    }
+  }
+
 }

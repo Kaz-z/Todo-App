@@ -1,4 +1,5 @@
 <section class="todoapp">
+  <h1 [style.color]="getStyle()">Your Todos</h1>
   <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
   <app-todo-list [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)"
                  (remove)="onRemoveTodo($event)"></app-todo-list>
